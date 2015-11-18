@@ -1,44 +1,25 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8">
     <title>Raytracer by brywalker1</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/brywalker1/RayTracer">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/brywalker1/RayTracer/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/brywalker1/RayTracer/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+    <section class="page-header">
+      <h1 class="project-name">Raytracer</h1>
+      <h2 class="project-tagline">Can AI find a way to project a 3D image?</h2>
+      <a href="https://github.com/brywalker1/RayTracer" class="btn">View on GitHub</a>
+      <a href="https://github.com/brywalker1/RayTracer/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/brywalker1/RayTracer/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Raytracer</h1>
-          <p>Can AI find a way to project a 3D image?</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/brywalker1">brywalker1</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
-        <p>Before I graduate from college, I want to find a way to make 3D images that you can see from many different directions.  Today, there are a lot of ways to do just that, like <a href="https://en.wikipedia.org/wiki/Holography">holographic plates</a>, <a href="http://science.howstuffworks.com/3-d-glasses.htm">3D Glasses</a>, <a href="https://www.oculus.com/en-us/">Heads up displays</a>, <a href="https://www.youtube.com/watch?v=FF1vFTQOWN4">spinning mirrors</a>, <a href="http://makezine.com/2014/04/18/fog-projection-combined-with-gestural-interface-to-create-hologram-touchscreen/">fog projections</a>, and <a href="http://www.pocket-lint.com/news/131622-holograms-are-finally-here-plasma-lasers-used-to-create-images-in-mid-air">laser shows</a>.  There are also other interesting low tech optical illusions out there, like <a href="https://www.youtube.com/watch?v=TcqyoYfHIFM">Pepper's Ghost</a>, and <a href="https://www.youtube.com/watch?v=j0jtxXfxx3E">mirascopes</a>.</p>
+    <section class="main-content">
+      <p>Before I graduate from college, I want to find a way to make 3D images that you can see from many different directions.  Today, there are a lot of ways to do just that, like <a href="https://en.wikipedia.org/wiki/Holography">holographic plates</a>, <a href="http://science.howstuffworks.com/3-d-glasses.htm">3D Glasses</a>, <a href="https://www.oculus.com/en-us/">Heads up displays</a>, <a href="https://www.youtube.com/watch?v=FF1vFTQOWN4">spinning mirrors</a>, <a href="http://makezine.com/2014/04/18/fog-projection-combined-with-gestural-interface-to-create-hologram-touchscreen/">fog projections</a>, and <a href="http://www.pocket-lint.com/news/131622-holograms-are-finally-here-plasma-lasers-used-to-create-images-in-mid-air">laser shows</a>.  There are also other interesting low tech optical illusions out there, like <a href="https://www.youtube.com/watch?v=TcqyoYfHIFM">Pepper's Ghost</a>, and <a href="https://www.youtube.com/watch?v=j0jtxXfxx3E">mirascopes</a>.</p>
 
 <p>My idea is based on a mirascope.
 <a href="https://www.youtube.com/watch?v=8m2No1NGZVc" title="Mirascope on Water"><img src="https://img.youtube.com/vi/8m2No1NGZVc/0.jpg" alt="Mirascope"></a> </p>
@@ -47,21 +28,28 @@
 
 <p>I want to replace the top mirror and the object with an LED screen--allowing for animated, interactive objects. The problem?  I need to direct the LEDs in specific directions, and I don't know what those directions are. <em>Enter artificial intelligence</em>.</p>
 
-<p><img src="https://drive.google.com/file/d/0BwYc2qNCY1QTVGNZYzAtbjhtdGs/view?usp=sharing" alt="Concept Drawing">
-One of the most basic forms of artificial intelligence is called hill climbing. In hill climbing, AI basically finds a solution, scores it according to some metric, and then tries to find a better one.  After doing this for 'a long time', it finds a 'good' solution (although not necessarily the 'best' solution) based on your scoring metric.</p>
+<p><img src="https://raw.githubusercontent.com/brywalker1/RayTracer/master/Concept%20Drawing.png" alt="Concept Drawing"></p>
+
+<p>One of the most basic forms of artificial intelligence is called hill climbing. In hill climbing, AI basically finds a solution, scores it according to some metric, and then tries to find a better one.  After doing this for 'a long time', it finds a 'good' solution (although not necessarily the 'best' solution) based on your scoring metric.</p>
 
 <p>I had two important 'scores' I wanted to improve: I wanted <em>a lot</em> of points in space to have light pass through them, and I wanted the light that passed through them to come from <em>a lot</em> of different angles. Although these aren't very specific metrics, they are enough that an AI can decide if one solution is better than another--if it has more points or more angles, then it is better!  </p>
 
 <p>Here is a display of what I have running so far:  This screen replaces the upper screen of the mirascope, and the colors represent directions the LEDs are pointing. More red means the LED's are pointing toward the right.More Green means they are Pointing toward the bottom of the screen, and More blue means they are pointing directly into the screen, straight toward the mirror (you'll have to imagine the mirror.)</p>
 
-<p><a href="https://www.youtube.com/watch?v=DnGfxbo61G0" title="LED screen"><img src="https://img.youtube.com/vi/DnGfxbo61G0/0.jpg" alt="LEDscreen"></a></p>
+<p><img src="https://img.youtube.com/vi/DnGfxbo61G0/0.jpg" alt="LEDscreen">
+(<a href="https://www.youtube.com/watch?v=DnGfxbo61G0">https://www.youtube.com/watch?v=DnGfxbo61G0</a> "LED screen")</p>
 
 <p>p.s. for those of you not from our AI class that have somehow stumbled upon this webpage, welcome!  As part of my project, I had to build a ray tracer, both in matlab and in python. The code is already on GitHub, and after our class ends, I will add more details on it. </p>
-      </section>
 
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-              <script type="text/javascript">
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/brywalker1/RayTracer">Raytracer</a> is maintained by <a href="https://github.com/brywalker1">brywalker1</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
