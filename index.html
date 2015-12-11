@@ -48,7 +48,7 @@
 <h2>
 <a id="holograms-vs-3d-images" class="anchor" href="#holograms-vs-3d-images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Holograms vs. 3D images</h2>
 
-<p>Technically, a hologram is a photograph you can see from several angles. When illuminated correctly, you can move to a new position, and see the image from a different angle. 3D images include holographic sheets, but also include things like an image floating in fog, or Star War's "Help me Obi Wan" scene.  The goal of this project is to create a device that will I want to create similar, animated 3D images.</p>
+<p>Technically, a hologram is a photograph you can see from several angles. When illuminated correctly, you can move to a new position and see the image from a different angle. 3D images include holographic sheets, but they also include things like an image floating in fog or Star War's "Help me Obi Wan" scene.  The goal of this project is to create a device that will create similar, animated 3D images.</p>
 
 <p>Today, there are a lot of ways to create 3D images, like <a href="https://en.wikipedia.org/wiki/Holography">holographic plates</a>, <a href="http://science.howstuffworks.com/3-d-glasses.htm">3D Glasses</a>, <a href="https://www.oculus.com/en-us/">Heads up displays</a>, <a href="https://www.youtube.com/watch?v=FF1vFTQOWN4">spinning mirrors</a>, <a href="http://makezine.com/2014/04/18/fog-projection-combined-with-gestural-interface-to-create-hologram-touchscreen/">fog projections</a>, and <a href="http://www.pocket-lint.com/news/131622-holograms-are-finally-here-plasma-lasers-used-to-create-images-in-mid-air">laser shows</a>.  There are also other interesting low tech optical illusions out there, like <a href="https://www.youtube.com/watch?v=TcqyoYfHIFM">Pepper's Ghost</a>, and <a href="https://www.youtube.com/watch?v=8m2No1NGZVc" title="Mirascope on Water">mirascopes</a>.</p>
 
@@ -75,8 +75,8 @@
 <p>There are two important 'scores' for creating 3D images: </p>
 
 <ul>
-<li>each point in your image needs to be visible from several directions</li>
-<li>there need to be a lot of points to make an image</li>
+<li>Each point in your image needs to be visible from several directions</li>
+<li>There need to be a lot of points to make an image</li>
 </ul>
 
 <p>The tool used for scoring a particular mapping was a set of unit vectors, distributed around a sphere. We will call them sphere vectors.  They represent possible viewing angles for a given point in space.</p>
@@ -84,20 +84,20 @@
 <p>Scoring Algorithm:</p>
 
 <ul>
-<li>For each point in space, determining which light rays passed through it
+<li>For each point in space, determine which light rays passed through it
 
 <ul>
 <li>For each sphere vector
 
 <ul>
-<li>take the dot product of each light ray at the point in space with the sphere vector</li>
-<li>then save the largest resulting value.</li>
+<li>Take the dot product of each light ray at the point in space with the sphere vector</li>
+<li>Then save the largest resulting value.</li>
 <li>(This is the light ray closest to the sphere vector's direction)</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>sum the largest results for each sphere vector at each point in space.  This is your <strong>score.</strong>
+<li>Sum the largest results for each sphere vector at each point in space.  This is your <strong>score.</strong>
 </li>
 </ul>
 
@@ -109,7 +109,7 @@
 <h1>
 <a id="results" class="anchor" href="#results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results</h1>
 
-<p>Here is a display of what I have running so far:  This screen replaces the upper screen of the mirascope, and the colors represent directions the LEDs are pointing. More red means the LEDs are pointing toward the right. More Green means they are Pointing toward the bottom of the screen, and More blue means they are pointing directly into the screen, straight toward the mirror (you'll have to imagine the mirror.)</p>
+<p>Here is a display of what I have running so far:  This screen replaces the upper screen of the mirascope, and the colors represent directions the LEDs are pointing. More red means the LEDs are pointing toward the right. More green means they are pointing toward the bottom of the screen, and more blue means they are pointing directly into the screen, straight toward the mirror (you'll have to imagine the mirror.)</p>
 
 <p><a href="https://www.youtube.com/watch?v=DnGfxbo61G0" title="LED screen"><img src="https://img.youtube.com/vi/DnGfxbo61G0/0.jpg" alt="LEDscreen"></a></p>
       </section>
