@@ -128,6 +128,21 @@ class lightRay(object):
         self.n_index    = np.append(self.n_index   , newRays.n_index);
         self.phase      = np.append(self.phase     , newRays.phase  );
     
+    def __str__(self):
+        toReturn = "Position,,,                Direction,,,              Wavelen,  n_idx,  phase\n";
+        for i in range(len(self.n_index)):
+            #           pos  x        y        z        dir  u        v         w              wavlen     n_index      phase
+            thisline = ("{0:7.2f},{1:7.2f},{2:7.2f},"+"   {3:7.2f},{4:7.2f},{5:7.2f},"+"  {6:7.2f},"+"{7:7.2f},"+"{8:7.2f}\n").format(
+            self.position [0,i],self.position [1,i],self.position [2,i],
+            self.direction[0,i],self.direction[1,i],self.direction[2,i],
+            self.wavelength[i],
+            self.n_index[i],
+            self.phase[i],
+            )
+            toReturn = toReturn + thisline;
+
+        return toReturn;
+        
     def clone(self):
         return copy.deepcopy(self);
 
